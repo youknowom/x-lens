@@ -1,0 +1,232 @@
+/**
+ * Context Lens - Popup Styles
+ * Premium, modern, and high-quality design for the settings interface.
+ */
+
+:root {
+    --primary-color: #00ba7c;
+    /* X Green */
+    --secondary-color: #f91880;
+    /* X Pink */
+    --accent-color: #1d9bf0;
+    /* X Blue */
+    --background-color: #000000;
+    --card-bg: #16181c;
+    --text-color: #e7e9ea;
+    --text-dim: #71767b;
+    --border-color: #2f3336;
+}
+
+body {
+    width: 380px;
+    margin: 0;
+    padding: 0;
+    font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.popup-container {
+    padding: 16px;
+    background: linear-gradient(135deg, #000000 0%, #15202b 100%);
+}
+
+.popup-header {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.header-logo {
+    font-size: 24px;
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.header-tagline {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 4px 0 0 0;
+}
+
+.settings-section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.setting-item {
+    margin-bottom: 12px;
+}
+
+.switch-container,
+.select-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.setting-label {
+    flex-grow: 1;
+}
+
+/* Switch Styling */
+.switch-container input[type="checkbox"] {
+    display: none;
+}
+
+.slider {
+    width: 40px;
+    height: 20px;
+    background-color: var(--border-color);
+    border-radius: 9999px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.switch-container input:checked+.slider {
+    background-color: var(--primary-color);
+}
+
+.slider:before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+.switch-container input:checked+.slider:before {
+    transform: translateX(20px);
+}
+
+/* Select & Input Styling */
+select,
+input[type="password"] {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+}
+
+select:focus,
+input:focus {
+    border-color: var(--accent-color);
+}
+
+.api-key-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(29, 155, 240, 0.05);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.input-group {
+    display: flex;
+    gap: 8px;
+}
+
+.input-group input {
+    flex-grow: 1;
+}
+
+/* Buttons */
+.small-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.primary-btn {
+    width: 100%;
+    background-color: var(--text-color);
+    color: black;
+    border: none;
+    border-radius: 9999px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.primary-btn:hover {
+    background-color: #d7dbdc;
+}
+
+.secondary-btn {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 8px;
+    border-radius: 9999px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+/* Footer Stats */
+.popup-footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 16px;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: var(--text-dim);
+}
+
+.stats-value {
+    color: var(--primary-color);
+    font-weight: 600;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context Lens for X - Settings</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <header class="popup-header">
+            <div class="header-main">
+                <span class="header-logo">🔍</span>
+                <h1 class="header-title">Context Lens</h1>
+            </div>
+            <p class="header-tagline">AI-powered insights for X.com</p>
+        </header>
+
+        <section class="settings-section">
+            <h2 class="section-title">⚙️ Analysis Features</h2>
+            <div class="setting-item">
+                <label class="switch-container">
+                    <span class="setting-label">AI Probability Detection</span>
+                    <input type="checkbox" id="aiProbability" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <label class="switch-container">
+                    <span class="setting-label">Sentiment Analysis</span>
+                    <input type="checkbox" id="sentiment" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <label class="switch-container">
+                    <span class="setting-label">Toxicity Detection</span>
+                    <input type="checkbox" id="toxicity" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <label class="switch-container">
+                    <span class="setting-label">Auto-Summarization</span>
+                    <input type="checkbox" id="summarization" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </section>
+
+        <section class="settings-section">
+            <h2 class="section-title">🎨 Display Options</h2>
+            <div class="setting-item">
+                <label class="switch-container">
+                    <span class="setting-label">Auto-expand panels</span>
+                    <input type="checkbox" id="autoExpand">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <label class="select-container">
+                    <span class="setting-label">Theme</span>
+                    <select id="theme">
+                        <option value="auto">System (Auto)</option>
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </label>
+            </div>
+        </section>
+
+        <section class="settings-section">
+            <h2 class="section-title">🔧 Advanced</h2>
+            <div class="setting-item">
+                <label class="select-container">
+                    <span class="setting-label">Analysis Mode</span>
+                    <select id="analysisMode">
+                        <option value="api">API-Based (High Accuracy)</option>
+                        <option value="local">Local (Fast & Private)</option>
+                    </select>
+                </label>
+            </div>
+            <div class="setting-item api-key-group" id="apiKeyGroup">
+                <label for="apiKey" class="setting-label">Anthropic API Key</label>
+                <div class="input-group">
+                    <input type="password" id="apiKey" placeholder="sk-ant-...">
+                    <button id="saveApiKey" class="small-btn">Save</button>
+                </div>
+            </div>
+            <div class="setting-item">
+                <button id="clearCache" class="secondary-btn">Clear Cache (245 posts)</button>
+            </div>
+        </section>
+
+        <footer class="popup-footer">
+            <div class="stats-row">
+                <span class="stats-label">Analyzed today:</span>
+                <span class="stats-value" id="statsAnalyzed">47</span>
+            </div>
+            <div class="stats-row">
+                <span class="stats-label">API calls:</span>
+                <span class="stats-value" id="statsApiCalls">12/100</span>
+            </div>
+            <button id="saveSettings" class="primary-btn">Save Settings</button>
+        </footer>
+    </div>
+    <script type="module" src="popup.js"></script>
+</body>
+</html>

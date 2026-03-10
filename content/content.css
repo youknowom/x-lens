@@ -1,0 +1,14 @@
+/*
+ * Context Lens - Content Script Styles
+ * This file is injected into X.com pages.
+ * It imports the panel styles for the analysis UI.
+ */
+
+@import url('../styles/panel.css');
+
+/* Base injection styles */
+.context-lens-wrapper {
+    display: block;
+    margin: 8px 0;
+    clear: both;
+}
